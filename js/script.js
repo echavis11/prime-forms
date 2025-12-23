@@ -23,8 +23,6 @@ function parseSet(str) {
   const tokens = str.split(/[\s,]+/).filter(Boolean);
   const pcs = tokens.map(tok => {
     const t = tok.toUpperCase();
-    if (t === "T") return 10;
-    if (t === "E") return 11;
     if (!isNaN(t)) return mod12(+t);
     if (NOTE_TO_PC[t] !== undefined) return NOTE_TO_PC[t];
     throw `Bad token: ${tok}`;
