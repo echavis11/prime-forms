@@ -1,0 +1,171 @@
+:root {
+  --bg: #0b0f19;
+  --panel: #12182a;
+  --text: #eaf0ff;
+  --muted: #a9b4d6;
+  --accent: #7aa2ff;
+  --ok: #57d9a3;
+  --warn: #ffcc66;
+  --bad: #ff6b6b;
+  --border: rgba(255,255,255,.1);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.title p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 16px 32px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.hd {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bd {
+  padding: 16px;
+}
+
+label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 90px;
+  margin-top: 6px;
+  background: #00000040;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  color: var(--text);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.btns {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: #ffffff14;
+  color: var(--text);
+  cursor: pointer;
+}
+
+button.good {
+  background: #57d9a330;
+}
+
+button.secondary {
+  background: #ffffff0f;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px;
+  padding: 10px;
+  background: #00000030;
+  border-radius: 12px;
+}
+
+.k {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.v {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.status .led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warn);
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PC-Set Toolkit — Prime Form + Forte Number</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="title">
+    <h1>PC-Set Toolkit</h1>
+    <p>Translate pitch-class sets into normal form, prime form, and Forte numbers.</p>
+  </div>
+  <div class="badge"><span class="dot"></span> Music Set Theory</div>
+</header>
+
+<main>
+  <section class="card">
+    <div class="hd">
+      <div class="h">Input</div>
+      <div class="pill">Use numbers (0–11) or notes (C Eb F#)</div>
+    </div>
+    <div class="bd">
+      <label for="pcs">Pitch-class set</label>
+      <textarea id="pcs" placeholder="Examples:
+0 1 4 7
+C Eb G Bb
+11, 2, 5, 9"></textarea>
+
+      <div class="btns">
+        <button class="good" id="analyzeBtn">Analyze</button>
+        <button class="secondary" id="exampleBtn">Load example</button>
+        <button class="secondary" id="clearBtn">Clear</button>
+      </div>
+    </div>
+  </section>
+
+  <aside class="card">
+    <div class="hd">
+      <div class="h">Results</div>
+      <div id="status" class="status warn">
+        <span class="led"></span>
+        <span id="statusText">Waiting for input</span>
+      </div>
+    </div>
+    <div class="bd">
+      <div class="grid">
+        <div class="kv"><div class="k">Parsed set</div><div class="v" id="outParsed">—</div></div>
+        <div class="kv"><div class="k">Normal form</div><div class="v" id="outNormal">—</div></div>
+        <div class="kv"><div class="k">Prime form</div><div class="v" id="outPrime">—</div></div>
+        <div class="kv"><div class="k">IC vector</div><div class="v" id="outICV">—</div></div>
+        <div class="kv"><div class="k">Forte number</div><div class="v" id="outForte">—</div></div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
