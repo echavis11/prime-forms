@@ -30,7 +30,7 @@ C Eb G Bb
 11, 2, 5, 9"></textarea>
 
       <div class="btns">
-        <button class="good" id="analyzeBtn">Analyze</button>
+        <button class="good" id="analyzeBtn" disabled>Analyze</button>
         <button class="secondary" id="exampleBtn">Load example</button>
         <button class="secondary" id="clearBtn">Clear</button>
       </div>
@@ -45,13 +45,32 @@ C Eb G Bb
         <span id="statusText">Waiting for input</span>
       </div>
     </div>
+
     <div class="bd">
+
+      <!-- Pitch-Class Clock -->
+      <div class="clockWrap">
+        <svg id="pcClock" width="240" height="240" viewBox="0 0 240 240"></svg>
+
+        <label class="toggle">
+          <input type="checkbox" id="showComplement" />
+          Show complement
+        </label>
+      </div>
+
       <div class="grid">
         <div class="kv"><div class="k">Parsed set</div><div class="v" id="outParsed">—</div></div>
         <div class="kv"><div class="k">Normal form</div><div class="v" id="outNormal">—</div></div>
         <div class="kv"><div class="k">Prime form</div><div class="v" id="outPrime">—</div></div>
         <div class="kv"><div class="k">IC vector</div><div class="v" id="outICV">—</div></div>
-        <div class="kv"><div class="k">Forte number</div><div class="v" id="outForte">—</div></div>
+        <div class="kv">
+          <div class="k">Forte number</div>
+          <div class="v" id="outForte">—</div>
+        </div>
+        <div class="kv">
+          <div class="k">Complement FN</div>
+          <div class="v" id="outComplement">—</div>
+        </div>
       </div>
     </div>
   </aside>
